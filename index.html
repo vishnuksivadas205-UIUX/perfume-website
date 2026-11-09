@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Majestic Parfums — Haute Parfumerie Paris. Discover artisanal luxury fragrances, pure rare oud, solar jasmine, and signature long-lasting scents." />
+  <title>Majestic Parfums — Haute Parfumerie Paris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Majestic Parfums home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" role="img">
+          <circle cx="20" cy="20" r="15.5"></circle>
+          <path d="M20 7.5 23.4 16l9.1.7-7 5.9 2.2 8.8-7.7-4.8-7.7 4.8 2.2-8.8-7-5.9 9.1-.7z"></path>
+        </svg>
+      </span>
+      <span class="brand-copy">
+        <span class="brand-name">MAJESTIC</span>
+        <span class="brand-subtitle">PARFUMS</span>
+      </span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#best-of-month">BESTSELLERS</a>
+      <a href="#shop">COLLECTION</a>
+      <a href="#testimonials">TESTIMONIALS</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button search-button" aria-label="Search fragrances" title="Search fragrances">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.2"></circle><path d="m15.4 15.4 5 5"></path></svg>
+      </button>
+      <button class="icon-button bag-button" aria-label="Shopping bag" title="Shopping Bag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l1 12h-15z"></path><path d="M9 9V6.5a3 3 0 0 1 6 0V9"></path></svg>
+        <span class="bag-count">0</span>
+      </button>
+
+      <!-- LOGGED-OUT BUTTON -->
+      <a href="auth.html" class="nav-auth-btn" id="navLoginBtn">LOG IN</a>
+
+      <!-- LOGGED-IN ACCOUNT DROPDOWN WRAPPER -->
+      <div class="nav-account-wrap" id="navAccountWrap" style="display: none;">
+        <button type="button" class="nav-account-btn" id="navAccountBtn" aria-expanded="false" aria-haspopup="true">
+          <span class="nav-account-avatar" id="navAvatarInitials">EL</span>
+          <span class="nav-account-name" id="navAccountName">Éléonore</span>
+          <svg class="dropdown-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+
+        <!-- LUXURY ACCOUNT DROPDOWN CARD -->
+        <div class="nav-account-dropdown" id="navAccountDropdown">
+          <div class="account-dropdown-header">
+            <div class="dropdown-avatar-large" id="dropdownAvatarLarge">EL</div>
+            <div class="dropdown-user-info">
+              <span class="dropdown-user-name" id="dropdownUserName">Éléonore Laurent</span>
+              <span class="dropdown-user-email" id="dropdownUserEmail">eleonore.laurent@parfums.fr</span>
+              <!-- <span class="dropdown-user-tier">✦ Connoisseur Tier</span> -->
+            </div>
+          </div>
+
+          <ul class="account-dropdown-menu">
+            <li>
+              <a href="profile.html#profile">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#orders">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <span>My Orders</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#wishlist">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                <span>Wishlist / Favorites</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#addresses">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Saved Addresses</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#payments">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                <span>Payment Methods</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#notifications">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <span>Notifications</span>
+                <span class="menu-badge">2</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#settings">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                <span>Settings</span>
+              </a>
+            </li>
+            <div class="account-dropdown-divider"></div>
+            <li>
+              <button type="button" class="account-dropdown-logout" id="dropdownLogoutBtn">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                <span>Log Out</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY BAR (WORKABLE CATEGORY SEARCH FLOW) -->
+  <div class="search-overlay" id="searchOverlay" aria-label="Fragrance Search">
+    <div class="search-overlay-inner">
+      <div class="search-input-box">
+        <svg class="search-input-icon" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.2"></circle><path d="m15.4 15.4 5 5"></path></svg>
+        <input type="text" id="fragranceSearchInput" class="search-input" placeholder="Search (e.g. mens perfume, womens perfume, woody, floral)..." autocomplete="off" />
+        <button class="search-clear-btn" id="searchCloseBtn" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-quick-categories">
+        <span class="quick-cat-label">QUICK CATEGORIES:</span>
+        <button type="button" class="quick-cat-btn" data-category="him">Men's Perfume (For Him)</button>
+        <button type="button" class="quick-cat-btn" data-category="her">Women's Perfume (For Her)</button>
+        <button type="button" class="quick-cat-btn" data-category="unisex">Unisex</button>
+        <button type="button" class="quick-cat-btn" data-category="woody">Woody</button>
+        <button type="button" class="quick-cat-btn" data-category="fresh">Fresh</button>
+        <button type="button" class="quick-cat-btn" data-category="floral">Floral</button>
+        <button type="button" class="quick-cat-btn" data-category="oriental">Oriental</button>
+        <button type="button" class="quick-cat-btn" data-category="long-lasting">Long Lasting</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1. HERO SECTION (HOME) -->
+    <section class="hero" id="home" aria-label="Majestic Parfums introduction">
+      <div class="hero-content">
+        <p class="hero-eyebrow">THE ART OF FRAGRANCE</p>
+        <h1>Timeless Luxury,<br />Bottled</h1>
+        <p class="hero-description">
+          Discover a fragrance that defines your presence. Majestic Parfums blends bold sophistication, rare botanical essences, and warm amber to create scents that linger beyond the moment.
+        </p>
+        <div class="hero-actions">
+          <a class="explore-button" href="#best-of-month">Explore Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT US SECTION (NOW 2ND AFTER HOME, INCLUDES WIDE INGREDIENTS IMAGE) -->
+    <section class="about-section" id="about">
+      <div class="about-content">
+        <h2>About Us</h2>
+        <blockquote class="about-quote">
+          “Majestic was born from a simple belief: a fragrance should feel deeply personal. We create every scent in-house, from first idea to final bottle, so each one carries our singular signature.”
+        </blockquote>
+        <div class="about-button">
+          <a href="#best-of-month">KNOW MORE <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="about-image-wrapper">
+        <img src="assets/perfume-ingredients.png" alt="Majestic perfume collection and botanical raw ingredients" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- 3. "BEST OF THE MONTH" CATEGORY SECTION (EXACT DESIGN MATCHING UPLOADED REFERENCE) -->
+    <section class="category-showcase-section" id="best-of-month" aria-labelledby="best-month-title">
+      <div class="section-header-wrap">
+        <h2 id="best-month-title" class="category-heading">Best of the month</h2>
+        <p class="category-subheading">CURATED SIGNATURE SCENTS</p>
+      </div>
+
+      <!-- CATEGORY FILTER PILLS -->
+      <div class="filter-pills-container" role="tablist" aria-label="Fragrance categories">
+        <button class="filter-pill active" data-filter="all" role="tab" aria-selected="true">All Fragrances</button>
+        <button class="filter-pill" data-filter="him" role="tab" aria-selected="false">For Him</button>
+        <button class="filter-pill" data-filter="her" role="tab" aria-selected="false">For Her</button>
+        <button class="filter-pill" data-filter="unisex" role="tab" aria-selected="false">Unisex</button>
+        <button class="filter-pill" data-filter="fresh" role="tab" aria-selected="false">Fresh</button>
+        <button class="filter-pill" data-filter="woody" role="tab" aria-selected="false">Woody</button>
+        <button class="filter-pill" data-filter="oriental" role="tab" aria-selected="false">Oriental</button>
+        <button class="filter-pill" data-filter="floral" role="tab" aria-selected="false">Floral</button>
+        <button class="filter-pill" data-filter="long-lasting" role="tab" aria-selected="false">Long Lasting</button>
+      </div>
+
+      <!-- CARDS CAROUSEL / GRID WRAPPER -->
+      <div class="cards-carousel-wrapper">
+        <button class="carousel-arrow prev" aria-label="Previous perfumes" title="Previous">
+          <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <div class="cards-slider-track" id="cardsTrack">
+
+          <!-- CARD 1: Aurélia Nuit Dorée (Golden bottle) -->
+          <article class="perfume-card" data-categories="all her unisex oriental long-lasting" data-id="p1" data-href="product.html">
+            <div class="card-top">
+              <span class="card-badge">LONGEVITY: 10–12 HOURS</span>
+            </div>
+            <div class="card-image-wrap">
+              <a href="product.html"><img src="assets/normalized/perfume3.png" alt="Aurélia Nuit Dorée luxury perfume bottle" class="card-bottle-img" loading="lazy" /></a>
+            </div>
+            <hr class="card-divider" />
+            <div class="card-meta">
+              <div class="card-title-price-row">
+                <h3 class="card-name"><a href="product.html">Aurélia Nuit Dorée</a></h3>
+                <div class="card-price-group">
+                  <span class="card-price">$185</span>
+                  <span class="card-price-per-ml">($3.70 / ml)</span>
+                </div>
+              </div>
+              <p class="card-concentration">EAU DE PARFUM</p>
+              <div class="card-size-selector" role="group" aria-label="Select perfume size">
+                <button type="button" class="size-pill active" data-size="50" data-price="185" data-per-ml="3.70">50 ML</button>
+                <button type="button" class="size-pill" data-size="100" data-price="295" data-per-ml="2.95">100 ML</button>
+              </div>
+              <button type="button" class="card-add-btn">ADD TO CART</button>
+            </div>
+          </article>
+
+          <!-- CARD 2: Santal Impérial Noir (Black luxury bottle) -->
+          <article class="perfume-card" data-categories="all him unisex woody long-lasting" data-id="p2" data-href="product.html">
+            <div class="card-top">
+              <span class="card-badge">LONGEVITY: 14+ HOURS</span>
+            </div>
+            <div class="card-image-wrap">
+              <a href="product.html"><img src="assets/normalized/perfume4.png" alt="Santal Impérial Noir luxury perfume bottle" class="card-bottle-img" loading="lazy" /></a>
+            </div>
+            <hr class="card-divider" />
+            <div class="card-meta">
+              <div class="card-title-price-row">
+                <h3 class="card-name"><a href="product.html">Santal Impérial Noir</a></h3>
+                <div class="card-price-group">
+                  <span class="card-price">$210</span>
+                  <span class="card-price-per-ml">($4.20 / ml)</span>
+                </div>
+              </div>
+              <p class="card-concentration">EXTRAIT DE PARFUM</p>
+              <div class="card-size-selector" role="group" aria-label="Select perfume size">
+                <button type="button" class="size-pill active" data-size="50" data-price="210" data-per-ml="4.20">50 ML</button>
+                <button type="button" class="size-pill" data-size="100" data-price="335" data-per-ml="3.35">100 ML</button>
+              </div>
+              <button type="button" class="card-add-btn">ADD TO CART</button>
+            </div>
+          </article>
+
+          <!-- CARD 3: Rose Radieuse & Musc (Pink crystal bottle) -->
+          <article class="perfume-card" data-categories="all her floral fresh" data-id="p3" data-href="rose-radieuse.html">
+            <div class="card-top">
+              <span class="card-badge">LONGEVITY: 8–10 HOURS</span>
+            </div>
+            <div class="card-image-wrap">
+              <a href="rose-radieuse.html" aria-label="View Rose Radieuse & Musc"><img src="assets/rose-radieuse-bottle.png" alt="Rose Radieuse & Musc luxury perfume bottle" class="card-bottle-img" loading="lazy" /></a>
+            </div>
+            <hr class="card-divider" />
+            <div class="card-meta">
+              <div class="card-title-price-row">
+                <h3 class="card-name"><a href="rose-radieuse.html">Rose Radieuse & Musc</a></h3>
+                <div class="card-price-group">
+                  <span class="card-price">$175</span>
+                  <span class="card-price-per-ml">($3.50 / ml)</span>
+                </div>
+              </div>
+              <p class="card-concentration">EAU DE PARFUM</p>
+              <div class="card-size-selector" role="group" aria-label="Select perfume size">
+                <button type="button" class="size-pill active" data-size="50" data-price="175" data-per-ml="3.50">50 ML</button>
+                <button type="button" class="size-pill" data-size="100" data-price="275" data-per-ml="2.75">100 ML</button>
+              </div>
+              <button type="button" class="card-add-btn">ADD TO CART</button>
+            </div>
+          </article>
+
+          <!-- CARD 4: Améthyste Mystique (Purple bottle) -->
+          <article class="perfume-card" data-categories="all her unisex oriental floral long-lasting" data-id="p4" data-href="product.html">
+            <div class="card-top">
+              <span class="card-badge">LONGEVITY: 12–14 HOURS</span>
+            </div>
+            <div class="card-image-wrap">
+              <img src="assets/normalized/perfume1.png" alt="Améthyste Mystique luxury perfume bottle" class="card-bottle-img" loading="lazy" />
+            </div>
+            <hr class="card-divider" />
+            <div class="card-meta">
+              <div class="card-title-price-row">
+                <h3 class="card-name">Améthyste Mystique</h3>
+                <div class="card-price-group">
+                  <span class="card-price">$195</span>
+                  <span class="card-price-per-ml">($3.90 / ml)</span>
+                </div>
+              </div>
+              <p class="card-concentration">EAU DE PARFUM</p>
+              <div class="card-size-selector" role="group" aria-label="Select perfume size">
+                <button type="button" class="size-pill active" data-size="50" data-price="195" data-per-ml="3.90">50 ML</button>
+                <button type="button" class="size-pill" data-size="100" data-price="310" data-per-ml="3.10">100 ML</button>
+              </div>
+              <button type="button" class="card-add-btn">ADD TO CART</button>
+            </div>
+          </article>
+
+          <!-- CARD 5: Rouge Intense Sauvage (Spiced red bottle) -->
+          <article class="perfume-card" data-categories="all him woody oriental long-lasting" data-id="p5" data-href="product.html">
+            <div class="card-top">
+              <span class="card-badge">LONGEVITY: 12+ HOURS</span>
+            </div>
+            <div class="card-image-wrap">
+              <a href="product.html"><img src="assets/normalized/perfume5.png" alt="Rouge Intense Sauvage luxury perfume bottle" class="card-bottle-img" loading="lazy" /></a>
+            </div>
+            <hr class="card-divider" />
+            <div class="card-meta">
+              <div class="card-title-price-row">
+                <h3 class="card-name"><a href="product.html">Rouge Intense Sauvage</a></h3>
+                <div class="card-price-group">
+                  <span class="card-price">$205</span>
+                  <span class="card-price-per-ml">($4.10 / ml)</span>
+                </div>
+              </div>
+              <p class="card-concentration">EAU DE PARFUM</p>
+              <div class="card-size-selector" role="group" aria-label="Select perfume size">
+                <button type="button" class="size-pill active" data-size="50" data-price="205" data-per-ml="4.10">50 ML</button>
+                <button type="button" class="size-pill" data-size="100" data-price="320" data-per-ml="3.20">100 ML</button>
+              </div>
+              <button type="button" class="card-add-btn">ADD TO CART</button>
+            </div>
+          </article>
+
+          <!-- CARD 6: Oud Rubis Royal (Faceted ruby bottle) -->
+          <article class="perfume-card" data-categories="all him unisex woody oriental long-lasting" data-id="p6" data-href="product.html">
+            <div class="card-top">
+              <span class="card-badge">LONGEVITY: 16+ HOURS</span>
+            </div>
+            <div class="card-image-wrap">
+              <a href="product.html"><img src="assets/normalized/luxurious-transparent-red-perfume-bottle.png" alt="Oud Rubis Royal luxury perfume bottle" class="card-bottle-img" loading="lazy" /></a>
+            </div>
+            <hr class="card-divider" />
+            <div class="card-meta">
+              <div class="card-title-price-row">
+                <h3 class="card-name"><a href="product.html">Oud Rubis Royal</a></h3>
+                <div class="card-price-group">
+                  <span class="card-price">$240</span>
+                  <span class="card-price-per-ml">($4.80 / ml)</span>
+                </div>
+              </div>
+              <p class="card-concentration">EXTRAIT DE PARFUM</p>
+              <div class="card-size-selector" role="group" aria-label="Select perfume size">
+                <button type="button" class="size-pill active" data-size="50" data-price="240" data-per-ml="4.80">50 ML</button>
+                <button type="button" class="size-pill" data-size="100" data-price="380" data-per-ml="3.80">100 ML</button>
+              </div>
+              <button type="button" class="card-add-btn">ADD TO CART</button>
+            </div>
+          </article>
+
+          <!-- CARD 7: Céleste Vétiver (Geometric flacon) -->
+          <article class="perfume-card" data-categories="all him unisex fresh woody" data-id="p7" data-href="product.html">
+            <div class="card-top">
+              <span class="card-badge">LONGEVITY: 10–12 HOURS</span>
+            </div>
+            <div class="card-image-wrap">
+              <img src="assets/normalized/4.png" alt="Céleste Vétiver luxury perfume bottle" class="card-bottle-img" loading="lazy" />
+            </div>
+            <hr class="card-divider" />
+            <div class="card-meta">
+              <div class="card-title-price-row">
+                <h3 class="card-name">Céleste Vétiver</h3>
+                <div class="card-price-group">
+                  <span class="card-price">$180</span>
+                  <span class="card-price-per-ml">($3.60 / ml)</span>
+                </div>
+              </div>
+              <p class="card-concentration">EAU DE PARFUM</p>
+              <div class="card-size-selector" role="group" aria-label="Select perfume size">
+                <button type="button" class="size-pill active" data-size="50" data-price="180" data-per-ml="3.60">50 ML</button>
+                <button type="button" class="size-pill" data-size="100" data-price="285" data-per-ml="2.85">100 ML</button>
+              </div>
+              <button type="button" class="card-add-btn">ADD TO CART</button>
+            </div>
+          </article>
+
+          <!-- CARD 8: Bergamote & Cèdre (Square flacon) -->
+          <article class="perfume-card" data-categories="all him her unisex fresh" data-id="p8" data-href="product.html">
+            <div class="card-top">
+              <span class="card-badge">LONGEVITY: 8–10 HOURS</span>
+            </div>
+            <div class="card-image-wrap">
+              <img src="assets/normalized/images.png" alt="Bergamote & Cèdre luxury perfume bottle" class="card-bottle-img" loading="lazy" />
+            </div>
+            <hr class="card-divider" />
+            <div class="card-meta">
+              <div class="card-title-price-row">
+                <h3 class="card-name">Bergamote & Cèdre</h3>
+                <div class="card-price-group">
+                  <span class="card-price">$165</span>
+                  <span class="card-price-per-ml">($3.30 / ml)</span>
+                </div>
+              </div>
+              <p class="card-concentration">EAU DE PARFUM</p>
+              <div class="card-size-selector" role="group" aria-label="Select perfume size">
+                <button type="button" class="size-pill active" data-size="50" data-price="165" data-per-ml="3.30">50 ML</button>
+                <button type="button" class="size-pill" data-size="100" data-price="260" data-per-ml="2.60">100 ML</button>
+              </div>
+              <button type="button" class="card-add-btn">ADD TO CART</button>
+            </div>
+          </article>
+
+          <!-- CARD 9: Violette Impériale (Graceful violet flacon) -->
+          <article class="perfume-card" data-categories="all her floral oriental" data-id="p9" data-href="product.html">
+            <div class="card-top">
+              <span class="card-badge">LONGEVITY: 10–12 HOURS</span>
+            </div>
+            <div class="card-image-wrap">
+              <img src="assets/normalized/purple-perfume-bottle.png" alt="Violette Impériale luxury perfume bottle" class="card-bottle-img" loading="lazy" />
+            </div>
+            <hr class="card-divider" />
+            <div class="card-meta">
+              <div class="card-title-price-row">
+                <h3 class="card-name">Violette Impériale</h3>
+                <div class="card-price-group">
+                  <span class="card-price">$190</span>
+                  <span class="card-price-per-ml">($3.80 / ml)</span>
+                </div>
+              </div>
+              <p class="card-concentration">EAU DE PARFUM</p>
+              <div class="card-size-selector" role="group" aria-label="Select perfume size">
+                <button type="button" class="size-pill active" data-size="50" data-price="190" data-per-ml="3.80">50 ML</button>
+                <button type="button" class="size-pill" data-size="100" data-price="295" data-per-ml="2.95">100 ML</button>
+              </div>
+              <button type="button" class="card-add-btn">ADD TO CART</button>
+            </div>
+          </article>
+
+        </div>
+
+        <button class="carousel-arrow next" aria-label="Next perfumes" title="Next">
+          <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <!-- CAROUSEL DOTS -->
+      <div class="carousel-dots" id="carouselDots" aria-hidden="true"></div>
+    </section>
+
+    <!-- 4. STATEMENT BANNER SECTION (NEXT TO CATEGORY SECTION) -->
+    <section class="statement-section" id="statement" aria-label="A statement fragrance">
+      <div class="statement-container">
+        <!-- Desktop / Wide View: Statement banner with editorial typography overlay -->
+        <div class="statement-banner-wrap">
+          <div class="statement-banner-bg">
+            <div class="statement-banner-overlay">
+              <div class="statement-banner-content">
+                <span class="statement-banner-eyebrow">HAUTE PARFUMERIE • PARIS</span>
+                <h2 class="statement-banner-title"> Scent of Elegance</h2>
+                <p class="statement-banner-desc">Elevate your presence with fragrances that speak for you. Crafted with rare botanical essences and warm amber accords.</p>
+                <a href="#best-of-month" class="statement-banner-btn" aria-label="Shop statement fragrances">SHOP NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Optimized View: Guaranteed 16px minimum font size, crisp typography & layout -->
+        <div class="statement-mobile-card">
+          <div class="statement-mobile-img-box">
+            <img src="assets/banner-new.jpg" alt="Majestic luxury fragrance flacon" loading="lazy" />
+          </div>
+          <div class="statement-mobile-body">
+            <h2 class="statement-mobile-heading">— a statement.</h2>
+            <p class="statement-mobile-sub">Elevate your presence with fragrances that speak for you.</p>
+            <a href="#best-of-month" class="statement-mobile-action">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. AUTO-SCROLLING COLLECTION SECTION (ALL BOTTLES EXACT SAME HEIGHT) -->
+    <section class="collection-section" id="shop">
+      <div class="section-title-container">
+        <h2 class="section-heading">
+          Welcome to our collection,<br>
+          discover them
+        </h2>
+      </div>
+
+      <div class="perfume-slider" aria-label="Auto-scrolling perfume showcase">
+        <div class="perfume-track">
+          <!-- First set of normalized bottles -->
+          <div class="bottle-item"><img src="assets/normalized/perfume1.png" alt="Améthyste Mystique"></div>
+          <div class="bottle-item"><img src="assets/normalized/perfume2.png" alt="Rose Radieuse"></div>
+          <div class="bottle-item"><img src="assets/normalized/perfume3.png" alt="Aurélia Nuit Dorée"></div>
+          <div class="bottle-item"><img src="assets/normalized/perfume4.png" alt="Santal Impérial"></div>
+          <div class="bottle-item"><img src="assets/normalized/perfume5.png" alt="Rouge Intense"></div>
+          <div class="bottle-item"><img src="assets/normalized/luxurious-transparent-red-perfume-bottle.png" alt="Oud Rubis"></div>
+          <div class="bottle-item"><img src="assets/normalized/purple-perfume-bottle.png" alt="Violette Impériale"></div>
+          <div class="bottle-item"><img src="assets/normalized/4.png" alt="Céleste Vétiver"></div>
+
+          <!-- Duplicate set for seamless continuous scrolling -->
+          <div class="bottle-item"><img src="assets/normalized/perfume1.png" alt=""></div>
+          <div class="bottle-item"><img src="assets/normalized/perfume2.png" alt=""></div>
+          <div class="bottle-item"><img src="assets/normalized/perfume3.png" alt=""></div>
+          <div class="bottle-item"><img src="assets/normalized/perfume4.png" alt=""></div>
+          <div class="bottle-item"><img src="assets/normalized/perfume5.png" alt=""></div>
+          <div class="bottle-item"><img src="assets/normalized/luxurious-transparent-red-perfume-bottle.png" alt=""></div>
+          <div class="bottle-item"><img src="assets/normalized/purple-perfume-bottle.png" alt=""></div>
+          <div class="bottle-item"><img src="assets/normalized/4.png" alt=""></div>
+        </div>
+      </div>
+
+      <div class="collection-button">
+        <a href="#best-of-month">KNOW MORE <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- 5. TESTIMONIALS SECTION (LEFT-ALIGNED TEXT WITH UNIFORM HEIGHT & WIDTH) -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="section-header-wrap">
+        <h2 class="testimonials-heading">What Our Customers Say</h2>
+        <p class="testimonials-subheading">REAL EXPERIENCES WITH OUR SIGNATURE SCENTS</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- TESTIMONIAL 1 -->
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-rating" aria-label="Rated 5.0 out of 5 stars">
+              <span class="rating-stars">★★★★★</span>
+              <span class="rating-val">5.0</span>
+            </div>
+            <span class="testimonial-badge">AURÉLIA NUIT DORÉE</span>
+          </div>
+          <div class="testimonial-quote-box">
+            <p class="testimonial-quote">
+              “The longevity of Aurélia is astonishing. The warm amber and bourbon vanilla radiate with quiet confidence all evening.”
+            </p>
+          </div>
+          <hr class="testimonial-divider" />
+          <div class="testimonial-author-wrap">
+            <h4 class="testimonial-author-name">Éléonore Laurent</h4>
+            <p class="testimonial-author-role">Verified Customer • Paris</p>
+          </div>
+        </article>
+
+        <!-- TESTIMONIAL 2 -->
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-rating" aria-label="Rated 5.0 out of 5 stars">
+              <span class="rating-stars">★★★★★</span>
+              <span class="rating-val">5.0</span>
+            </div>
+            <span class="testimonial-badge">SANTAL IMPÉRIAL NOIR</span>
+          </div>
+          <div class="testimonial-quote-box">
+            <p class="testimonial-quote">
+              “Finally a fragrance with genuine depth and zero synthetic sharpness. The smoked sandalwood dry-down is pure artisanal mastery.”
+            </p>
+          </div>
+          <hr class="testimonial-divider" />
+          <div class="testimonial-author-wrap">
+            <h4 class="testimonial-author-name">Julian Vance</h4>
+            <p class="testimonial-author-role">Verified Customer • London</p>
+          </div>
+        </article>
+
+        <!-- TESTIMONIAL 3 -->
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-rating" aria-label="Rated 5.0 out of 5 stars">
+              <span class="rating-stars">★★★★★</span>
+              <span class="rating-val">5.0</span>
+            </div>
+            <span class="testimonial-badge">ROSE RADIEUSE & MUSC</span>
+          </div>
+          <div class="testimonial-quote-box">
+            <p class="testimonial-quote">
+              “Fresh, luminous, and timeless. The crisp pink peppercorn and dewy rose accords are completely elevated.”
+            </p>
+          </div>
+          <hr class="testimonial-divider" />
+          <div class="testimonial-author-wrap">
+            <h4 class="testimonial-author-name">Camille Fontaine</h4>
+            <p class="testimonial-author-role">Verified Customer • Zurich</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. NEWSLETTER SECTION -->
+    <section class="newsletter-section">
+      <div class="newsletter-inner">
+        <h2>Receive Privileged Access</h2>
+        <p>Subscribe to receive invitations to private extrait releases and private olfactory consultations.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" class="newsletter-input" placeholder="Enter your email address..." required aria-label="Email address" />
+          <button type="submit" class="newsletter-btn">JOIN CIRCLE</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- LUXURY SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col brand-col">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="15.5"></circle>
+              <path d="M20 7.5 23.4 16l9.1.7-7 5.9 2.2 8.8-7.7-4.8-7.7 4.8 2.2-8.8-7-5.9 9.1-.7z"></path>
+            </svg>
+          </span>
+          <span class="brand-copy">
+            <span class="brand-name">MAJESTIC</span>
+            <span class="brand-subtitle">PARFUMS PARIS</span>
+          </span>
+        </div>
+        <p class="footer-tagline">Haute Parfumerie crafting memories through scent artistry since 2018.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>FRAGRANCES</h4>
+        <ul>
+          <li><a href="#best-of-month">Bestsellers of the Month</a></li>
+          <li><a href="#best-of-month">Extrait de Parfum</a></li>
+          <li><a href="#best-of-month">Eau de Parfum</a></li>
+          <li><a href="#best-of-month">Discovery Sets</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>THE MAISON</h4>
+        <ul>
+          <li><a href="#about">About Our Founders</a></li>
+          <li><a href="#about">Artisanal Ingredients</a></li>
+          <li><a href="#testimonials">Client Stories</a></li>
+          <li><a href="#shop">Collection</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CLIENT SERVICES</h4>
+        <ul>
+          <li><a href="#best-of-month">Complimentary Samples</a></li>
+          <li><a href="#best-of-month">Track Your Shipment</a></li>
+          <li><a href="#best-of-month">Bespoke Scent Consultation</a></li>
+          <li><a href="#best-of-month">Boutique Concierge</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">© 2026 MAJESTIC PARFUMS. ALL RIGHTS RESERVED.</p>
+      <div class="footer-links">
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">TERMS OF SERVICE</a>
+        <a href="#">COOKIE SETTINGS</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SHOPPING BAG SLIDE-OUT DRAWER -->
+  <div class="bag-drawer-backdrop" id="bagBackdrop"></div>
+  <aside class="bag-drawer" id="bagDrawer" aria-label="Shopping bag">
+    <div class="drawer-header">
+      <h3>YOUR SHOPPING BAG (<span id="drawerCount">0</span>)</h3>
+      <button class="drawer-close-btn" id="drawerClose" aria-label="Close bag">✕</button>
+    </div>
+    <!-- SELECT ALL BAR -->
+    <div class="drawer-select-all-bar" id="drawerSelectAllBar" style="display: none;">
+      <label class="cart-select-label" for="cartSelectAll">
+        <input type="checkbox" id="cartSelectAll" class="cart-item-checkbox" checked />
+        <span>Select All (<span id="cartSelectedCount">0</span>)</span>
+      </label>
+      <span class="cart-selected-hint">Selected for checkout</span>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="empty-bag-notice">
+        <p>Your shopping bag is currently empty.</p>
+        <a href="#best-of-month" class="drawer-shop-link">Discover Bestsellers →</a>
+      </div>
+    </div>
+    <div class="drawer-footer" id="drawerFooter" style="display: none;">
+      <div class="drawer-subtotal-row">
+        <span>Selected Subtotal</span>
+        <strong id="drawerSubtotal">$0</strong>
+      </div>
+      <button type="button" class="drawer-checkout-btn" id="drawerCheckoutBtn">PROCEED TO CHECKOUT</button>
+    </div>
+  </aside>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notification" id="toastNotice" role="status" aria-live="polite">
+    <span class="toast-message">Added to your shopping bag</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

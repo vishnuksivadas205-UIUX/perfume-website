@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rose Radieuse & Musc — Eau de Parfum. A luminous, delicate creation woven from Grasse Centifolia rose and ethereal white musk." />
+  <title>Rose Radieuse &amp; Musc — Eau de Parfum | Majestic Parfums Paris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="product-page-body">
+
+  <!-- SITE HEADER (IDENTICAL NAVIGATION AS HOME PAGE) -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Majestic Parfums home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" role="img">
+          <circle cx="20" cy="20" r="15.5"></circle>
+          <path d="M20 7.5 23.4 16l9.1.7-7 5.9 2.2 8.8-7.7-4.8-7.7 4.8 2.2-8.8-7-5.9 9.1-.7z"></path>
+        </svg>
+      </span>
+      <span class="brand-copy">
+        <span class="brand-name">MAJESTIC</span>
+        <span class="brand-subtitle">PARFUMS</span>
+      </span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">HOME</a>
+      <a href="index.html#about">ABOUT</a>
+      <a class="active" href="index.html#best-of-month">BESTSELLERS</a>
+      <a href="index.html#shop">COLLECTION</a>
+      <a href="index.html#testimonials">TESTIMONIALS</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button search-button" aria-label="Search fragrances" title="Search fragrances">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.2"></circle><path d="m15.4 15.4 5 5"></path></svg>
+      </button>
+      <button class="icon-button bag-button" aria-label="Shopping bag" title="Shopping Bag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l1 12h-15z"></path><path d="M9 9V6.5a3 3 0 0 1 6 0V9"></path></svg>
+        <span class="bag-count">0</span>
+      </button>
+
+      <!-- LOGGED-OUT BUTTON -->
+      <a href="auth.html" class="nav-auth-btn" id="navLoginBtn">LOG IN</a>
+
+      <!-- LOGGED-IN ACCOUNT DROPDOWN WRAPPER -->
+      <div class="nav-account-wrap" id="navAccountWrap" style="display: none;">
+        <button type="button" class="nav-account-btn" id="navAccountBtn" aria-expanded="false" aria-haspopup="true">
+          <span class="nav-account-avatar" id="navAvatarInitials">EL</span>
+          <span class="nav-account-name" id="navAccountName">Éléonore</span>
+          <svg class="dropdown-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+
+        <!-- LUXURY ACCOUNT DROPDOWN CARD -->
+        <div class="nav-account-dropdown" id="navAccountDropdown">
+          <div class="account-dropdown-header">
+            <div class="dropdown-avatar-large" id="dropdownAvatarLarge">EL</div>
+            <div class="dropdown-user-info">
+              <span class="dropdown-user-name" id="dropdownUserName">Éléonore Laurent</span>
+              <span class="dropdown-user-email" id="dropdownUserEmail">eleonore.laurent@parfums.fr</span>
+              <span class="dropdown-user-tier">✦ Connoisseur Tier</span>
+            </div>
+          </div>
+
+          <ul class="account-dropdown-menu">
+            <li>
+              <a href="profile.html#profile">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#orders">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <span>My Orders</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#wishlist">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                <span>Wishlist / Favorites</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#addresses">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Saved Addresses</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#payments">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                <span>Payment Methods</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#notifications">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <span>Notifications</span>
+                <span class="menu-badge">2</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#settings">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                <span>Settings</span>
+              </a>
+            </li>
+            <div class="account-dropdown-divider"></div>
+            <li>
+              <button type="button" class="account-dropdown-logout" id="dropdownLogoutBtn">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                <span>Log Out</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY BAR -->
+  <div class="search-overlay" id="searchOverlay" aria-label="Fragrance Search">
+    <div class="search-overlay-inner">
+      <div class="search-input-box">
+        <svg class="search-input-icon" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.2"></circle><path d="m15.4 15.4 5 5"></path></svg>
+        <input type="text" id="fragranceSearchInput" class="search-input" placeholder="Search (e.g. floral, rose, musc, fresh)..." autocomplete="off" />
+        <button class="search-clear-btn" id="searchCloseBtn" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-quick-categories">
+        <span class="quick-cat-label">QUICK CATEGORIES:</span>
+        <button type="button" class="quick-cat-btn" data-category="him">Men's Perfume (For Him)</button>
+        <button type="button" class="quick-cat-btn" data-category="her">Women's Perfume (For Her)</button>
+        <button type="button" class="quick-cat-btn" data-category="unisex">Unisex</button>
+        <button type="button" class="quick-cat-btn" data-category="woody">Woody</button>
+        <button type="button" class="quick-cat-btn" data-category="fresh">Fresh</button>
+        <button type="button" class="quick-cat-btn" data-category="floral">Floral</button>
+        <button type="button" class="quick-cat-btn" data-category="oriental">Oriental</button>
+        <button type="button" class="quick-cat-btn" data-category="long-lasting">Long Lasting</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- BREADCRUMB NAVIGATION -->
+    <nav class="product-breadcrumb-wrap" aria-label="Breadcrumb">
+      <ol class="product-breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><span>/</span></li>
+        <li><a href="index.html#best-of-month">Category</a></li>
+        <li><span>/</span></li>
+        <li aria-current="page">Rose Radieuse &amp; Musc</li>
+      </ol>
+    </nav>
+
+    <!-- MAIN PRODUCT DISPLAY (GALLERY + PURCHASE PANEL) -->
+    <section class="product-hero-section" id="productHero" aria-label="Product Details">
+      <div class="product-hero-grid">
+
+        <!-- LEFT COLUMN: INTERACTIVE PRODUCT GALLERY WITH 4 USER IMAGES -->
+        <div class="product-gallery-col">
+          <div class="product-main-image-card">
+            <span class="gallery-badge">MAISON BESTSELLER</span>
+            <img id="mainProductImg" src="assets/rose-radieuse-bottle.png" alt="Rose Radieuse & Musc Luxury Flacon" class="main-display-img" />
+          </div>
+
+          <!-- 4 INTERACTIVE THUMBNAILS (WORKING IMAGE CHANGER) -->
+          <div class="product-thumbnails-row" role="tablist" aria-label="Product Image Views">
+            <button type="button" class="thumb-btn active" role="tab" aria-selected="true" data-img="assets/rose-radieuse-bottle.png" aria-label="Full crystal flacon view">
+              <img src="assets/rose-radieuse-bottle.png" alt="Full Flacon View" />
+            </button>
+            <button type="button" class="thumb-btn" role="tab" aria-selected="false" data-img="assets/rose-radieuse-open.jpg" aria-label="Cap and atomiser facet view">
+              <img src="assets/rose-radieuse-open.jpg" alt="Cap View" />
+            </button>
+            <button type="button" class="thumb-btn" role="tab" aria-selected="false" data-img="assets/rose-radieuse-angle.jpg" aria-label="Perspective crystal facet view">
+              <img src="assets/rose-radieuse-angle.jpg" alt="Perspective View" />
+            </button>
+            <button type="button" class="thumb-btn" role="tab" aria-selected="false" data-img="assets/rose-radieuse-top.jpg" aria-label="Top crystal facet view">
+              <img src="assets/rose-radieuse-top.jpg" alt="Top View" />
+            </button>
+          </div>
+
+          <!-- TRUST & CRAFTSMANSHIP BADGES (WITHOUT ICONS) -->
+          <div class="product-trust-badges">
+            <div class="trust-badge-item">
+              <div class="trust-badge-text">
+                <strong>Free 2ml Discovery Sample</strong>
+                <span>Try before unsealing bottle</span>
+              </div>
+            </div>
+            <div class="trust-badge-item">
+              <div class="trust-badge-text">
+                <strong>Handcrafted in Paris &amp; Grasse</strong>
+                <span>18% Eau de Parfum concentration</span>
+              </div>
+            </div>
+            <div class="trust-badge-item">
+              <div class="trust-badge-text">
+                <strong>30-Day Maison Guarantee</strong>
+                <span>Complimentary express returns</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: PRODUCT DETAILS & UPGRADED PURCHASE PANEL -->
+        <div class="product-info-col">
+          <div class="product-title-header">
+            <div class="product-subtitle-tag">HAUTE PARFUMERIE PARIS • EDITION 2026</div>
+            <h1 class="product-title-name">Rose Radieuse &amp; Musc <span class="product-edition-pill">EAU DE PARFUM</span></h1>
+            
+            <div class="product-rating-meta">
+              <div class="stars-display" aria-label="Rated 5.0 out of 5 stars">
+                <span class="star-glyph">★★★★★</span>
+                <span class="rating-number">5.0</span>
+              </div>
+              <span class="meta-separator">•</span>
+              <span class="reviews-count">248 Verified Connoisseurs</span>
+              <span class="meta-separator">•</span>
+              <span class="stock-status">In High Demand</span>
+            </div>
+          </div>
+
+          <p class="product-main-description">
+            A luminous, delicate creation woven from freshly harvested Centifolia and Damask rose petals, cradled by ethereal white skin musk and sunlit golden amber. Elegant, sensual, and unforgettably radiant from morning to night.
+          </p>
+
+          <!-- SCENT ACCORDS CHIPS -->
+          <div class="product-accords-wrap">
+            <span class="accord-chip">Centifolia Rose</span>
+            <span class="accord-chip">White Musk</span>
+            <span class="accord-chip">Damask Absolute</span>
+            <span class="accord-chip">Velvet Cashmeran</span>
+          </div>
+
+          <!-- SIZE SELECTION (ONLY 50ML AND 100ML TEXT, NO SUBTEXT) -->
+          <div class="product-option-block">
+            <div class="option-header-label">
+              <span>SELECT BOTTLE SIZE:</span>
+              <span class="selected-size-label" id="selectedSizeText">50 ML</span>
+            </div>
+            <div class="product-size-buttons" role="group" aria-label="Choose bottle size">
+              <button type="button" class="size-select-btn active" data-size="50" data-price="175" data-per-ml="3.50">
+                <span class="size-name">50 ML</span>
+              </button>
+              <button type="button" class="size-select-btn" data-size="100" data-price="275" data-per-ml="2.75">
+                <span class="size-name">100 ML</span>
+              </button>
+              <button type="button" class="size-select-btn" id="engravingToggleBtn" data-size="engraved">
+                <span class="size-name">PERSONALISED</span>
+              </button>
+            </div>
+
+            <!-- OPTIONAL BESPOKE ENGRAVING FIELD -->
+            <div class="engraving-input-box" id="engravingBox" style="display: none;">
+              <label for="engravingText">Custom Initials / Name (Up to 10 characters):</label>
+              <div class="engraving-field-wrap">
+                <input type="text" id="engravingText" maxlength="10" placeholder="e.g. M.V. 2026" />
+                <span class="engraving-complimentary-tag">Complimentary Atelier Service</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ADD ITEMS (EXACT DESIGN MATCHING UPLOADED IMAGE 1) -->
+          <div class="addon-items-section">
+            <div class="addon-items-heading">ADD ITEMS</div>
+            <div class="addon-item-card" id="addonItemCard">
+              <label class="addon-card-label" for="addonCheck">
+                <input type="checkbox" id="addonCheck" class="addon-checkbox-native" data-addon-price="9" />
+                <span class="addon-circle-selector" aria-hidden="true"></span>
+                <img src="assets/mini-set-thumb.png" alt="Majestic Set – 5 Mini Perfume" class="addon-thumb" />
+                <div class="addon-info-col">
+                  <h4 class="addon-item-title">Majestic Set – 5 Mini Perfume</h4>
+                  <p class="addon-item-sub">Try our bestsellers before choosing your next full bottle.</p>
+                </div>
+                <div class="addon-price-col">
+                  <span class="addon-add-label">Add for</span>
+                  <span class="addon-price-val">$9.00</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- UPGRADED LUXURY PRICE DESIGN & QUANTITY -->
+          <div class="product-purchase-box">
+            <div class="price-and-qty-row">
+              <div class="luxury-price-display">
+                <div class="price-main-line">
+                  <span class="price-currency">$</span>
+                  <span class="price-figure" id="livePriceFigure">175</span>
+                  <span class="price-per-ml-text" id="livePricePerMl">($3.50 / ml)</span>
+                </div>
+                <div class="price-taxes-note">
+                  <span>✦ Taxes Included</span>
+                  <span class="sep">•</span>
+                  <span>Free Worldwide Express Shipping</span>
+                </div>
+              </div>
+
+              <!-- QUANTITY ADJUSTER -->
+              <div class="product-qty-adjuster" role="group" aria-label="Adjust quantity">
+                <button type="button" class="qty-btn" id="qtyMinus" aria-label="Decrease quantity">−</button>
+                <span class="qty-count-val" id="qtyVal">1</span>
+                <button type="button" class="qty-btn" id="qtyPlus" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+
+            <!-- INSTALLMENT FINANCING CALLOUT -->
+            <div class="klarna-installment-bar">
+              <span>Or 4 interest-free payments of <strong id="installmentFigure">$43.75</strong> with Klarna or Afterpay.</span>
+            </div>
+
+            <!-- CALL TO ACTION BUTTONS -->
+            <div class="product-cta-buttons" id="productCtaButtons">
+              <button type="button" class="cta-btn-black product-add-cart-btn" id="productAddToCartBtn">
+                <span class="btn-text">ADD TO CART</span>
+                <span class="btn-arrow">→</span>
+              </button>
+
+              <a href="checkout.html" class="cta-btn-white product-buy-now-btn" id="productBuyNowBtn">
+                <span class="btn-text">BUY NOW</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+
+            <div class="dispatch-assurance">
+              <span class="dispatch-dot"></span>
+              <span>In stock in our Grasse Atelier. Dispatched within 24 hours in signature gift packaging with wax seal.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- THE OLFACTORY PYRAMID SECTION -->
+    <section class="olfactory-pyramid-section" id="pyramid" aria-labelledby="pyramid-title">
+      <div class="section-header-wrap">
+        <span class="pyramid-eyebrow">SCENT ARCHITECTURE</span>
+        <h2 id="pyramid-title" class="pyramid-heading">The Olfactory Pyramid</h2>
+        <p class="pyramid-subheading">Crafted in three harmonious movements of luminous flora and sensual musc.</p>
+      </div>
+
+      <div class="pyramid-cards-grid">
+        <!-- 01 TOP NOTES -->
+        <div class="pyramid-note-card">
+          <div class="pyramid-card-header">
+            <span class="pyramid-num">01</span>
+            <span class="pyramid-timeline">TOP NOTES (FIRST 15 MINS)</span>
+          </div>
+          <h3 class="pyramid-phase-title">Luminous Dawn</h3>
+          <p class="pyramid-phase-desc">
+            Sparkling Calabrian Bergamot, dew-kissed pink peppercorn, and delicate morning lychee petals.
+          </p>
+          <div class="pyramid-tags-list">
+            <span class="note-pill">CALABRIAN BERGAMOT</span>
+            <span class="note-pill">PINK PEPPERCORN</span>
+            <span class="note-pill">DEWY LYCHEE</span>
+          </div>
+        </div>
+
+        <!-- 02 HEART ACCORD (HIGHLIGHTED CARD) -->
+        <div class="pyramid-note-card heart-accord-card">
+          <div class="heart-badge-pill">HEART ACCORD</div>
+          <div class="pyramid-card-header">
+            <span class="pyramid-num">02</span>
+            <span class="pyramid-timeline">HEART NOTES (2 - 4 HOURS)</span>
+          </div>
+          <h3 class="pyramid-phase-title">Floral Radiance</h3>
+          <p class="pyramid-phase-desc">
+            Hand-harvested Grasse Centifolia rose petals intertwined with Damask rose absolute and velvet peony.
+          </p>
+          <div class="pyramid-tags-list">
+            <span class="note-pill">CENTIFOLIA ROSE</span>
+            <span class="note-pill">DAMASK ABSOLUTE</span>
+            <span class="note-pill">VELVET PEONY</span>
+          </div>
+        </div>
+
+        <!-- 03 BASE NOTES -->
+        <div class="pyramid-note-card">
+          <div class="pyramid-card-header">
+            <span class="pyramid-num">03</span>
+            <span class="pyramid-timeline">BASE NOTES (5 - 12+ HOURS)</span>
+          </div>
+          <h3 class="pyramid-phase-title">Sensual Silhouette</h3>
+          <p class="pyramid-phase-desc">
+            Silken white skin musk, warm golden amber, and soft cedarwood creating an unforgettable second-skin trail.
+          </p>
+          <div class="pyramid-tags-list">
+            <span class="note-pill">WHITE MUSK</span>
+            <span class="note-pill">GOLDEN AMBER</span>
+            <span class="note-pill">CEDARWOOD</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENT PERFORMANCE & ACCORDIONS SECTION -->
+    <section class="performance-accordion-section" aria-label="Performance and Formulation Details">
+      <div class="performance-grid">
+
+        <!-- LEFT: SPECIFICATIONS & PERFORMANCE METERS -->
+        <div class="performance-card">
+          <div class="perf-tag">SPECIFICATIONS</div>
+          <h3 class="perf-title">Scent Performance</h3>
+
+          <div class="perf-metric-item">
+            <div class="metric-label-row">
+              <span class="metric-name">Longevity</span>
+              <span class="metric-val">High (8 - 10 Hours)</span>
+            </div>
+            <div class="metric-progress-track">
+              <div class="metric-progress-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+
+          <div class="perf-metric-item">
+            <div class="metric-label-row">
+              <span class="metric-name">Sillage &amp; Projection</span>
+              <span class="metric-val">Moderate to Alluring</span>
+            </div>
+            <div class="metric-progress-track">
+              <div class="metric-progress-fill" style="width: 80%;"></div>
+            </div>
+          </div>
+
+          <div class="perf-metric-item">
+            <div class="metric-label-row">
+              <span class="metric-name">Seasonality</span>
+              <span class="metric-val">Spring / Summer / Daytime Twilight</span>
+            </div>
+            <div class="metric-progress-track">
+              <div class="metric-progress-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <hr class="perf-divider" />
+
+          <div class="perf-formulation-note">
+            <h4>Eau de Parfum (18% Concentration)</h4>
+            <p>
+              Macerated for 6 weeks in Grasse to achieve perfect harmony between delicate floral oils and velvety skin musks.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT: INTERACTIVE ACCORDIONS -->
+        <div class="accordions-list">
+
+          <div class="accordion-item active">
+            <button type="button" class="accordion-trigger" aria-expanded="true">
+              <span>Ingredients &amp; Formulary Integrity</span>
+              <span class="accordion-icon">−</span>
+            </button>
+            <div class="accordion-panel">
+              <p>
+                Alcohol Denat., Parfum (Fragrance), Aqua (Water), Rosa Damascena Flower Oil, Hydroxycitronellal, Linalool, Citronellol, Geraniol, Alpha-Isomethyl Ionone, Limonene, Benzyl Alcohol. 100% cruelty-free, IFRA certified, and formulated without synthetic dyes.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false">
+              <span>The Application Ritual</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-panel" style="display: none;">
+              <p>
+                Mist onto pulse points where warmth diffuses the blooming rose notes: inner wrists, base of the neck, behind the ears. For an ethereal halo, lightly mist over your hairbrush before styling.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false">
+              <span>Complimentary Gifting &amp; Samples Included</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-panel" style="display: none;">
+              <p>
+                Every 50ml and 100ml flacon arrives accompanied by a complimentary 2ml sample vial of Rose Radieuse & Musc. Test the sample on your skin; if you find it does not suit you, return the unsealed main bottle within 30 days for an effortless full refund.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false">
+              <span>Shipping &amp; Maison Guarantee</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-panel" style="display: none;">
+              <p>
+                Complimentary DHL Express Worldwide Delivery on all orders. Shipments arrive fully insured in signature shock-proof packaging with bespoke black wax seal. Tracking updates are provided via email and SMS.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SIMILAR PRODUCTS (DOES NOT SHOW ROSE RADIEUSE ITSELF) -->
+    <section class="similar-products-section" aria-labelledby="similar-title">
+      <div class="section-header-wrap">
+        <h2 id="similar-title" class="similar-heading">Similar Products</h2>
+        <p class="similar-subheading">EXPLORE COMPLEMENTARY SIGNATURE CREATIONS</p>
+      </div>
+
+      <div class="similar-grid">
+
+        <!-- CARD 1: Aurélia Nuit Dorée (links to product.html) -->
+        <article class="perfume-card" data-categories="all her unisex oriental long-lasting" data-id="p1" data-href="product.html">
+          <div class="card-top">
+            <span class="card-badge">LONGEVITY: 10–12 HOURS</span>
+          </div>
+          <div class="card-image-wrap">
+            <a href="product.html" aria-label="View Aurélia Nuit Dorée"><img src="assets/product-rose-bottle.png" alt="Aurélia Nuit Dorée luxury perfume bottle" class="card-bottle-img" loading="lazy" /></a>
+          </div>
+          <hr class="card-divider" />
+          <div class="card-meta">
+            <div class="card-title-price-row">
+              <h3 class="card-name"><a href="product.html">Aurélia Nuit Dorée</a></h3>
+              <div class="card-price-group">
+                <span class="card-price">$185</span>
+                <span class="card-price-per-ml">($3.70 / ml)</span>
+              </div>
+            </div>
+            <p class="card-concentration">EXTRAIT DE PARFUM</p>
+            <div class="card-size-selector">
+              <button type="button" class="size-pill active" data-size="50" data-price="185" data-per-ml="3.70">50 ML</button>
+              <button type="button" class="size-pill" data-size="100" data-price="295" data-per-ml="2.95">100 ML</button>
+            </div>
+            <button type="button" class="card-add-btn">ADD TO CART</button>
+          </div>
+        </article>
+
+        <!-- CARD 2: Santal Impérial Noir -->
+        <article class="perfume-card" data-categories="all him woody oriental" data-id="p2">
+          <div class="card-top">
+            <span class="card-badge">LONGEVITY: 10–12 HOURS</span>
+          </div>
+          <div class="card-image-wrap">
+            <a href="index.html#shop" aria-label="View Santal Impérial Noir"><img src="assets/hero-perfume.png" alt="Santal Impérial Noir luxury perfume bottle" class="card-bottle-img" loading="lazy" /></a>
+          </div>
+          <hr class="card-divider" />
+          <div class="card-meta">
+            <div class="card-title-price-row">
+              <h3 class="card-name"><a href="index.html#shop">Santal Impérial Noir</a></h3>
+              <div class="card-price-group">
+                <span class="card-price">$210</span>
+                <span class="card-price-per-ml">($4.20 / ml)</span>
+              </div>
+            </div>
+            <p class="card-concentration">EXTRAIT DE PARFUM</p>
+            <div class="card-size-selector">
+              <button type="button" class="size-pill active" data-size="50" data-price="210" data-per-ml="4.20">50 ML</button>
+              <button type="button" class="size-pill" data-size="100" data-price="330" data-per-ml="3.30">100 ML</button>
+            </div>
+            <button type="button" class="card-add-btn">ADD TO CART</button>
+          </div>
+        </article>
+
+        <!-- CARD 3: Améthyste Mystique -->
+        <article class="perfume-card" data-categories="all her unisex oriental" data-id="p4">
+          <div class="card-top">
+            <span class="card-badge">LONGEVITY: 12–14 HOURS</span>
+          </div>
+          <div class="card-image-wrap">
+            <a href="index.html#shop" aria-label="View Améthyste Mystique"><img src="assets/normalized/perfume1.png" alt="Améthyste Mystique luxury bottle" class="card-bottle-img" loading="lazy" /></a>
+          </div>
+          <hr class="card-divider" />
+          <div class="card-meta">
+            <div class="card-title-price-row">
+              <h3 class="card-name"><a href="index.html#shop">Améthyste Mystique</a></h3>
+              <div class="card-price-group">
+                <span class="card-price">$195</span>
+                <span class="card-price-per-ml">($3.90 / ml)</span>
+              </div>
+            </div>
+            <p class="card-concentration">EAU DE PARFUM</p>
+            <div class="card-size-selector">
+              <button type="button" class="size-pill active" data-size="50" data-price="195" data-per-ml="3.90">50 ML</button>
+              <button type="button" class="size-pill" data-size="100" data-price="310" data-per-ml="3.10">100 ML</button>
+            </div>
+            <button type="button" class="card-add-btn">ADD TO CART</button>
+          </div>
+        </article>
+
+        <!-- CARD 4: Rouge Intense Sauvage -->
+        <article class="perfume-card" data-categories="all him woody oriental" data-id="p5">
+          <div class="card-top">
+            <span class="card-badge">LONGEVITY: 12+ HOURS</span>
+          </div>
+          <div class="card-image-wrap">
+            <a href="index.html#shop" aria-label="View Rouge Intense Sauvage"><img src="assets/normalized/perfume5.png" alt="Rouge Intense Sauvage luxury bottle" class="card-bottle-img" loading="lazy" /></a>
+          </div>
+          <hr class="card-divider" />
+          <div class="card-meta">
+            <div class="card-title-price-row">
+              <h3 class="card-name"><a href="index.html#shop">Rouge Intense Sauvage</a></h3>
+              <div class="card-price-group">
+                <span class="card-price">$205</span>
+                <span class="card-price-per-ml">($4.10 / ml)</span>
+              </div>
+            </div>
+            <p class="card-concentration">EAU DE PARFUM</p>
+            <div class="card-size-selector">
+              <button type="button" class="size-pill active" data-size="50" data-price="205" data-per-ml="4.10">50 ML</button>
+              <button type="button" class="size-pill" data-size="100" data-price="320" data-per-ml="3.20">100 ML</button>
+            </div>
+            <button type="button" class="card-add-btn">ADD TO CART</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- LUXURY SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col brand-col">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="15.5"></circle>
+              <path d="M20 7.5 23.4 16l9.1.7-7 5.9 2.2 8.8-7.7-4.8-7.7 4.8 2.2-8.8-7-5.9 9.1-.7z"></path>
+            </svg>
+          </span>
+          <span class="brand-copy">
+            <span class="brand-name">MAJESTIC</span>
+            <span class="brand-subtitle">PARFUMS PARIS</span>
+          </span>
+        </div>
+        <p class="footer-tagline">Haute Parfumerie crafting memories through scent artistry since 2018.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>FRAGRANCES</h4>
+        <ul>
+          <li><a href="index.html#best-of-month">Bestsellers of the Month</a></li>
+          <li><a href="index.html#best-of-month">Extrait de Parfum</a></li>
+          <li><a href="index.html#best-of-month">Eau de Parfum</a></li>
+          <li><a href="index.html#best-of-month">Discovery Sets</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>THE MAISON</h4>
+        <ul>
+          <li><a href="index.html#about">About Our Founders</a></li>
+          <li><a href="index.html#about">Artisanal Ingredients</a></li>
+          <li><a href="index.html#testimonials">Client Stories</a></li>
+          <li><a href="index.html#shop">Collection</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CLIENT SERVICES</h4>
+        <ul>
+          <li><a href="index.html#best-of-month">Complimentary Samples</a></li>
+          <li><a href="index.html#best-of-month">Track Your Shipment</a></li>
+          <li><a href="index.html#best-of-month">Bespoke Scent Consultation</a></li>
+          <li><a href="index.html#best-of-month">Boutique Concierge</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">© 2026 MAJESTIC PARFUMS. ALL RIGHTS RESERVED.</p>
+      <div class="footer-links">
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">TERMS OF SERVICE</a>
+        <a href="#">COOKIE SETTINGS</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SHOPPING BAG SLIDE-OUT DRAWER -->
+  <div class="bag-drawer-backdrop" id="bagBackdrop"></div>
+  <aside class="bag-drawer" id="bagDrawer" aria-label="Shopping bag">
+    <div class="drawer-header">
+      <h3>YOUR SHOPPING BAG (<span id="drawerCount">0</span>)</h3>
+      <button class="drawer-close-btn" id="drawerClose" aria-label="Close bag">✕</button>
+    </div>
+    <!-- SELECT ALL BAR -->
+    <div class="drawer-select-all-bar" id="drawerSelectAllBar" style="display: none;">
+      <label class="cart-select-label" for="cartSelectAll">
+        <input type="checkbox" id="cartSelectAll" class="cart-item-checkbox" checked />
+        <span>Select All (<span id="cartSelectedCount">0</span>)</span>
+      </label>
+      <span class="cart-selected-hint">Selected for checkout</span>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="empty-bag-notice">
+        <p>Your shopping bag is currently empty.</p>
+        <a href="index.html#best-of-month" class="drawer-shop-link">Discover Bestsellers →</a>
+      </div>
+    </div>
+    <div class="drawer-footer" id="drawerFooter" style="display: none;">
+      <div class="drawer-subtotal-row">
+        <span>Selected Subtotal</span>
+        <strong id="drawerSubtotal">$0</strong>
+      </div>
+      <button type="button" class="drawer-checkout-btn" id="drawerCheckoutBtn">PROCEED TO CHECKOUT</button>
+    </div>
+  </aside>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notification" id="toastNotice" role="status" aria-live="polite">
+    <span class="toast-message">Added to your shopping bag</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

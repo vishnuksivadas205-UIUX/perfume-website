@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your private client profile at Majestic Parfums Paris. Manage orders, fragrance preferences, and atelier consultations." />
+  <title>My Profile & Privileges | Majestic Parfums Paris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="profile-page-body">
+
+  <!-- SITE HEADER (IDENTICAL NAVIGATION AS HOME & PRODUCT PAGES) -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Majestic Parfums home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" role="img">
+          <circle cx="20" cy="20" r="15.5"></circle>
+          <path d="M20 7.5 23.4 16l9.1.7-7 5.9 2.2 8.8-7.7-4.8-7.7 4.8 2.2-8.8-7-5.9 9.1-.7z"></path>
+        </svg>
+      </span>
+      <span class="brand-copy">
+        <span class="brand-name">MAJESTIC</span>
+        <span class="brand-subtitle">PARFUMS PARIS</span>
+      </span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html#home">HOME</a>
+      <a href="index.html#about">ABOUT</a>
+      <a href="index.html#best-of-month">BESTSELLERS</a>
+      <a href="index.html#shop">COLLECTION</a>
+      <a href="index.html#testimonials">TESTIMONIALS</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button search-button" aria-label="Search fragrances" title="Search fragrances">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.2"></circle><path d="m15.4 15.4 5 5"></path></svg>
+      </button>
+
+      <button class="icon-button bag-button" aria-label="Shopping bag" title="Shopping Bag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l1 12h-15z"></path><path d="M9 9V6.5a3 3 0 0 1 6 0V9"></path></svg>
+        <span class="bag-count">0</span>
+      </button>
+
+      <!-- LOGGED-OUT BUTTON -->
+      <a href="auth.html" class="nav-auth-btn" id="navLoginBtn" style="display: none;">LOG IN</a>
+
+      <!-- LOGGED-IN ACCOUNT DROPDOWN WRAPPER -->
+      <div class="nav-account-wrap" id="navAccountWrap">
+        <button type="button" class="nav-account-btn" id="navAccountBtn" aria-expanded="false" aria-haspopup="true">
+          <span class="nav-account-avatar" id="navAvatarInitials">EL</span>
+          <span class="nav-account-name" id="navAccountName">Éléonore</span>
+          <svg class="dropdown-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+
+        <!-- LUXURY ACCOUNT DROPDOWN CARD -->
+        <div class="nav-account-dropdown" id="navAccountDropdown">
+          <div class="account-dropdown-header">
+            <div class="dropdown-avatar-large" id="dropdownAvatarLarge">EL</div>
+            <div class="dropdown-user-info">
+              <span class="dropdown-user-name" id="dropdownUserName">Éléonore Laurent</span>
+              <span class="dropdown-user-email" id="dropdownUserEmail">eleonore.laurent@parfums.fr</span>
+              <!-- <span class="dropdown-user-tier">✦ Connoisseur Tier</span> -->
+            </div>
+          </div>
+
+          <ul class="account-dropdown-menu">
+            <li>
+              <a href="profile.html#profile">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#orders">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <span>My Orders</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#wishlist">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                <span>Wishlist / Favorites</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#addresses">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Saved Addresses</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#payments">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                <span>Payment Methods</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#notifications">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <span>Notifications</span>
+                <span class="menu-badge">2</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html#settings">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                <span>Settings</span>
+              </a>
+            </li>
+            <div class="account-dropdown-divider"></div>
+            <li>
+              <button type="button" class="account-dropdown-logout" id="dropdownLogoutBtn">
+                <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                <span>Log Out</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="profile-main-wrap">
+    <!-- BREADCRUMB -->
+    <nav class="product-breadcrumb-wrap" aria-label="Breadcrumb" style="padding: 16px 0 28px;">
+      <ol class="product-breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><span>/</span></li>
+        <li><span>Maison Client Privileges</span></li>
+        <li><span>/</span></li>
+        <li aria-current="page" id="breadcrumbProfilePage">My Profile</li>
+      </ol>
+    </nav>
+
+    <!-- PROFILE GRID LAYOUT -->
+    <div class="profile-layout-grid">
+
+      <!-- LEFT SIDEBAR -->
+      <aside class="profile-sidebar-card" aria-label="Account Navigation">
+        <div class="profile-card-user">
+          <div class="profile-avatar-large" id="sidebarAvatar">EL</div>
+          <h2 class="profile-user-name" id="sidebarUserName">Éléonore Laurent</h2>
+          <span class="profile-user-email" id="sidebarUserEmail">eleonore.laurent@parfums.fr</span>
+          <!-- <span class="profile-tier-badge">✦ Connoisseur Tier • Since 2024</span> -->
+        </div>
+
+        <nav class="profile-nav-list" aria-label="Profile Sections">
+          <button type="button" class="profile-nav-btn active" data-tab="profile">
+            <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>My Profile</span>
+          </button>
+          <button type="button" class="profile-nav-btn" data-tab="orders">
+            <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <span>My Orders</span>
+          </button>
+          <button type="button" class="profile-nav-btn" data-tab="wishlist">
+            <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <span>Wishlist / Favorites</span>
+          </button>
+          <button type="button" class="profile-nav-btn" data-tab="addresses">
+            <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Saved Addresses</span>
+          </button>
+          <button type="button" class="profile-nav-btn" data-tab="payments">
+            <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            <span>Payment Methods</span>
+          </button>
+          <button type="button" class="profile-nav-btn" data-tab="notifications">
+            <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span>Notifications</span>
+          </button>
+          <button type="button" class="profile-nav-btn" data-tab="settings">
+            <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            <span>Settings</span>
+          </button>
+          <button type="button" class="profile-nav-btn logout-tab" id="sidebarLogoutBtn">
+            <svg class="dropdown-menu-icon" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            <span>Log Out</span>
+          </button>
+        </nav>
+      </aside>
+
+      <!-- RIGHT CONTENT PANEL -->
+      <section class="profile-content-panel">
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             TAB 1: MY PROFILE (DETAILS & PREFERENCES)
+             ═══════════════════════════════════════════════════════════════════ -->
+        <div class="profile-tab-pane active" id="tab-profile">
+          <div class="tab-pane-header">
+            <div>
+              <h1 class="tab-pane-title">Personal Profile</h1>
+              <p class="tab-pane-desc">Manage your identity credentials and bespoke scent consultation notes.</p>
+            </div>
+          </div>
+
+          <!-- Photo Edit Section -->
+          <div class="avatar-edit-section">
+            <div class="avatar-edit-preview" id="editAvatarPreview">EL</div>
+            <div class="avatar-edit-actions">
+              <strong>Profile Monogram &amp; Portrait</strong>
+              <span style="font-size: 13px; color: var(--ink-muted);">Displayed on your Maison bespoke invitations.</span>
+              <div class="avatar-edit-btns">
+                <button type="button" class="avatar-upload-btn" id="uploadAvatarBtn">Change Photo</button>
+                <button type="button" class="avatar-remove-btn" id="resetAvatarBtn">Reset Monogram</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Form -->
+          <form id="profileDetailsForm">
+            <div class="form-row-two">
+              <div class="auth-form-group">
+                <label class="auth-label" for="profName">Full Name</label>
+                <input type="text" id="profName" class="auth-input" value="Éléonore Laurent" required />
+              </div>
+              <div class="auth-form-group">
+                <label class="auth-label" for="profEmail">Email Address</label>
+                <input type="email" id="profEmail" class="auth-input" value="eleonore.laurent@parfums.fr" required />
+              </div>
+            </div>
+
+            <div class="form-row-two">
+              <div class="auth-form-group">
+                <label class="auth-label" for="profPhone">Contact Phone</label>
+                <input type="tel" id="profPhone" class="auth-input" value="+33 6 42 68 00 12" />
+              </div>
+              <div class="auth-form-group">
+                <label class="auth-label" for="profDob">Date of Birth</label>
+                <input type="date" id="profDob" class="auth-input" value="1994-06-18" />
+              </div>
+            </div>
+
+            <!-- Fragrance Notes Preferences Accord -->
+            <div class="fragrance-preferences-section">
+              <label class="auth-label" style="font-size: 14px;">Preferred Fragrance Notes</label>
+              <p style="font-size: 13px; color: var(--ink-muted);">
+                Select your olfactory preferences to calibrate your complimentary 2ml discovery samples.
+              </p>
+
+              <div class="fragrance-chips-grid" id="fragranceChips">
+                <button type="button" class="note-accord-chip active" data-note="Floral"> Floral (Grasse Rose, Jasmine)</button>
+                <button type="button" class="note-accord-chip active" data-note="Woody"> Woody (Sandalwood, Cedar)</button>
+                <button type="button" class="note-accord-chip" data-note="Citrus"> Citrus (Bergamot, Neroli)</button>
+                <button type="button" class="note-accord-chip active" data-note="Oriental"> Oriental (Golden Amber, Benzoin)</button>
+                <button type="button" class="note-accord-chip" data-note="Fresh"> Fresh (Vetiver, Rain Accord)</button>
+                <button type="button" class="note-accord-chip" data-note="Gourmand"> Bourbon Vanilla &amp; Tonka</button>
+                <button type="button" class="note-accord-chip" data-note="Musk"> White Skin Musk</button>
+              </div>
+            </div>
+
+            <!-- Save CTA -->
+            <div style="display: flex; gap: 14px; margin-top: 32px;">
+              <button type="submit" class="auth-submit-btn" style="width: auto; padding: 0 36px;" id="saveProfileBtn">
+                Save Changes
+              </button>
+              <button type="reset" class="avatar-remove-btn" style="padding: 0 24px; font-size: 14px;">
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             TAB 2: MY ORDERS
+             ═══════════════════════════════════════════════════════════════════ -->
+        <div class="profile-tab-pane" id="tab-orders">
+          <div class="tab-pane-header">
+            <div>
+              <h1 class="tab-pane-title"> History</h1>
+              <p class="tab-pane-desc">Track real-time atelier bottling and DHL Express worldwide shipments.</p>
+            </div>
+          </div>
+
+          <div class="orders-history-list" id="profileOrdersList">
+            <!-- Order 1: Recent -->
+            <div class="order-history-card">
+              <div class="order-card-header">
+                <div>
+                  <span class="order-ref-title">Order #MP-2026-8891</span>
+                  <span style="font-size: 13px; color: var(--ink-muted); margin-left: 8px;">Placed today • Paid via Visa •••• 4242</span>
+                </div>
+                <span class="order-status-pill processing">● In Atelier Quality Inspection</span>
+              </div>
+              <div class="order-card-items">
+                <div class="order-item-inline">
+                  <img src="assets/product-rose-bottle.png" alt="Aurélia Nuit Dorée" />
+                  <div style="flex: 1;">
+                    <strong style="font-size: 16px;">Aurélia Nuit Dorée</strong>
+                    <p style="font-size: 13px; color: var(--ink-muted); margin: 0;">50 ML Flacon • Extrait de Parfum (24%)</p>
+                  </div>
+                  <strong>$185.00</strong>
+                </div>
+              </div>
+              <div class="order-card-footer">
+                <span style="font-size: 13px; color: var(--ink-muted);">Includes matching 2ml discovery vial &amp; Maison gift box</span>
+                <a href="confirmation.html" class="avatar-upload-btn" style="text-decoration: none; padding: 6px 16px;">View Receipt →</a>
+              </div>
+            </div>
+
+            <!-- Order 2: Delivered -->
+            <div class="order-history-card">
+              <div class="order-card-header">
+                <div>
+                  <span class="order-ref-title">Order #MP-2025-4120</span>
+                  <span style="font-size: 13px; color: var(--ink-muted); margin-left: 8px;">October 14, 2025</span>
+                </div>
+                <span class="order-status-pill delivered">✓ Delivered with Signature</span>
+              </div>
+              <div class="order-card-items">
+                <div class="order-item-inline">
+                  <img src="assets/rose-radieuse-bottle.png" alt="Rose Radieuse & Musc" />
+                  <div style="flex: 1;">
+                    <strong style="font-size: 16px;">Rose Radieuse &amp; Musc</strong>
+                    <p style="font-size: 13px; color: var(--ink-muted); margin: 0;">100 ML Flacon • Eau de Parfum</p>
+                  </div>
+                  <strong>$275.00</strong>
+                </div>
+              </div>
+              <div class="order-card-footer">
+                <span style="font-size: 13px; color: var(--ink-muted);">Delivered to 18 Rue de la Paix, 75002 Paris</span>
+                <a href="rose-radieuse.html" class="avatar-remove-btn" style="text-decoration: none;">Reorder Perfume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             TAB 3: WISHLIST / FAVORITES
+             ═══════════════════════════════════════════════════════════════════ -->
+        <div class="profile-tab-pane" id="tab-wishlist">
+          <div class="tab-pane-header">
+            <div>
+              <h1 class="tab-pane-title">Saved Fragrances</h1>
+              <p class="tab-pane-desc">Your curated favorites from the Haute Parfumerie collection.</p>
+            </div>
+          </div>
+
+          <div class="wishlist-items-grid">
+            <div class="wishlist-card">
+              <button type="button" class="wishlist-remove-btn" title="Remove from favorites">✕</button>
+              <img src="assets/hero-perfume.png" alt="Santal Impérial Noir" />
+              <h3 style="font-size: 17px; margin-bottom: 4px;">Santal Impérial Noir</h3>
+              <p style="font-size: 13px; color: var(--ink-muted); margin-bottom: 12px;">EXTRAIT • 50 ML</p>
+              <span style="font-size: 18px; font-weight: 700; margin-bottom: 14px;">$210.00</span>
+              <button type="button" class="auth-submit-btn" style="height: 40px; font-size: 12px;" onclick="showToast('Santal Impérial Noir added to bag')">
+                Add to Shopping Bag
+              </button>
+            </div>
+
+            <div class="wishlist-card">
+              <button type="button" class="wishlist-remove-btn" title="Remove from favorites">✕</button>
+              <img src="assets/normalized/perfume1.png" alt="Améthyste Mystique" />
+              <h3 style="font-size: 17px; margin-bottom: 4px;">Améthyste Mystique</h3>
+              <p style="font-size: 13px; color: var(--ink-muted); margin-bottom: 12px;">EAU DE PARFUM • 50 ML</p>
+              <span style="font-size: 18px; font-weight: 700; margin-bottom: 14px;">$195.00</span>
+              <button type="button" class="auth-submit-btn" style="height: 40px; font-size: 12px;" onclick="showToast('Améthyste Mystique added to bag')">
+                Add to Shopping Bag
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             TAB 4: SAVED ADDRESSES
+             ═══════════════════════════════════════════════════════════════════ -->
+        <div class="profile-tab-pane" id="tab-addresses">
+          <div class="tab-pane-header">
+            <div>
+              <h1 class="tab-pane-title">Saved Residences</h1>
+              <p class="tab-pane-desc">Primary destinations for white-glove insured delivery.</p>
+            </div>
+            <button type="button" class="avatar-upload-btn" onclick="showToast('Address editor opened')">+ Add New Address</button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+            <div style="border: 1.5px solid var(--ink); border-radius: 14px; padding: 22px; background: #fafafa; position: relative;">
+              <span class="profile-tier-badge" style="margin-bottom: 12px;">Primary Residence</span>
+              <h4 style="font-size: 16px; margin-bottom: 6px;">Éléonore Laurent</h4>
+              <p style="font-size: 14px; color: var(--ink-secondary); line-height: 1.5; margin-bottom: 12px;">
+                18 Rue de la Paix, Appartement 4B<br />
+                75002 Paris, France<br />
+                +33 6 42 68 00 12
+              </p>
+              <div style="display: flex; gap: 12px; font-size: 13px; font-weight: 600;">
+                <a href="#" style="color: var(--ink); text-decoration: underline;">Edit</a>
+                <span style="color: var(--border-light);">•</span>
+                <span style="color: var(--ink-muted);">Default for orders</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             TAB 5: PAYMENT METHODS
+             ═══════════════════════════════════════════════════════════════════ -->
+        <div class="profile-tab-pane" id="tab-payments">
+          <div class="tab-pane-header">
+            <div>
+              <h1 class="tab-pane-title">Payment Instruments</h1>
+              <p class="tab-pane-desc">Encrypted 256-bit bank grade payment instruments.</p>
+            </div>
+            <button type="button" class="avatar-upload-btn" onclick="showToast('Card registration modal opened')">+ Add Payment Method</button>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 14px; max-width: 520px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 22px; border: 1px solid var(--border-light); border-radius: 12px; background: #fafafa;">
+              <div style="display: flex; align-items: center; gap: 14px;">
+                <span style="font-weight: 800; font-size: 14px; letter-spacing: 1px; background: #111; color: #fff; padding: 4px 10px; border-radius: 4px;">VISA</span>
+                <div>
+                  <strong>Visa ending in •••• 4242</strong>
+                  <p style="font-size: 12px; color: var(--ink-muted); margin: 0;">Expires 09/28 • Default</p>
+                </div>
+              </div>
+              <span class="order-status-pill delivered" style="font-size: 11px;">Default</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             TAB 6: NOTIFICATIONS
+             ═══════════════════════════════════════════════════════════════════ -->
+        <div class="profile-tab-pane" id="tab-notifications">
+          <div class="tab-pane-header">
+            <div>
+              <h1 class="tab-pane-title">Maison Dispatches</h1>
+              <p class="tab-pane-desc">Private notifications regarding bespoke invitations and maceration reserves.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="padding: 18px; border-left: 3px solid #d4af37; background: #fafafa; border-radius: 0 10px 10px 0;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                <strong>Private Autumn Maceration Reserve Ready</strong>
+                <span style="font-size: 12px; color: var(--ink-muted);">2 hours ago</span>
+              </div>
+              <p style="font-size: 14px; color: var(--ink-muted); margin: 0;">Your preferred notes (Amber &amp; Sandalwood) are now bottled in our Grasse atelier.</p>
+            </div>
+            <div style="padding: 18px; border-left: 3px solid #111; background: #fafafa; border-radius: 0 10px 10px 0;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                <strong>Order #MP-2026-8891 Dispatched</strong>
+                <span style="font-size: 12px; color: var(--ink-muted);">Yesterday</span>
+              </div>
+              <p style="font-size: 14px; color: var(--ink-muted); margin: 0;">Your Aurélia Nuit Dorée flacon has passed final wax-seal inspection.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             TAB 7: SETTINGS
+             ═══════════════════════════════════════════════════════════════════ -->
+        <div class="profile-tab-pane" id="tab-settings">
+          <div class="tab-pane-header">
+            <div>
+              <h1 class="tab-pane-title">Security &amp; Privacy</h1>
+              <p class="tab-pane-desc">Manage authentication credentials and account preferences.</p>
+            </div>
+          </div>
+
+          <form style="max-width: 480px;" onsubmit="event.preventDefault(); showToast('Security settings updated');">
+            <div class="auth-form-group">
+              <label class="auth-label" for="currPass">Current Password</label>
+              <input type="password" id="currPass" class="auth-input" placeholder="••••••••••••" />
+            </div>
+            <div class="auth-form-group">
+              <label class="auth-label" for="newPass">New Password</label>
+              <input type="password" id="newPass" class="auth-input" placeholder="••••••••••••" />
+            </div>
+            <div class="auth-checkbox-row">
+              <input type="checkbox" id="twoFaCheck" checked />
+              <label for="twoFaCheck">Enable Two-Factor SMS Verification</label>
+            </div>
+            <button type="submit" class="auth-submit-btn" style="width: auto; padding: 0 32px;">Update Password</button>
+          </form>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- LUXURY SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col brand-col">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="15.5"></circle>
+              <path d="M20 7.5 23.4 16l9.1.7-7 5.9 2.2 8.8-7.7-4.8-7.7 4.8 2.2-8.8-7-5.9 9.1-.7z"></path>
+            </svg>
+          </span>
+          <span class="brand-copy">
+            <span class="brand-name">MAJESTIC</span>
+            <span class="brand-subtitle">PARFUMS PARIS</span>
+          </span>
+        </div>
+        <p class="footer-tagline">Haute Parfumerie crafting memories through scent artistry since 2018.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>FRAGRANCES</h4>
+        <ul>
+          <li><a href="index.html#best-of-month">Bestsellers of the Month</a></li>
+          <li><a href="product.html">Aurélia Nuit Dorée</a></li>
+          <li><a href="rose-radieuse.html">Rose Radieuse &amp; Musc</a></li>
+          <li><a href="index.html#best-of-month">Discovery Sets</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>THE MAISON</h4>
+        <ul>
+          <li><a href="index.html#about">About Our Founders</a></li>
+          <li><a href="index.html#about">Artisanal Ingredients</a></li>
+          <li><a href="index.html#testimonials">Client Stories</a></li>
+          <li><a href="index.html#shop">Collection</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CLIENT SERVICES</h4>
+        <ul>
+          <li><a href="profile.html">My Client Profile</a></li>
+          <li><a href="profile.html#orders">Track Your Shipment</a></li>
+          <li><a href="profile.html">Bespoke Scent Consultation</a></li>
+          <li><a href="index.html#best-of-month">Boutique Concierge</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">© 2026 MAJESTIC PARFUMS. ALL RIGHTS RESERVED.</p>
+      <div class="footer-links">
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">TERMS OF SERVICE</a>
+        <a href="#">COOKIE SETTINGS</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SHOPPING BAG SLIDE-OUT DRAWER -->
+  <div class="bag-drawer-backdrop" id="bagBackdrop"></div>
+  <aside class="bag-drawer" id="bagDrawer" aria-label="Shopping bag">
+    <div class="drawer-header">
+      <h3>YOUR SHOPPING BAG (<span id="drawerCount">0</span>)</h3>
+      <button class="drawer-close-btn" id="drawerClose" aria-label="Close bag">✕</button>
+    </div>
+    <div class="drawer-select-all-bar" id="drawerSelectAllBar" style="display: none;">
+      <label class="cart-select-label" for="cartSelectAll">
+        <input type="checkbox" id="cartSelectAll" class="cart-item-checkbox" checked />
+        <span>Select All (<span id="cartSelectedCount">0</span>)</span>
+      </label>
+      <span class="cart-selected-hint">Selected for checkout</span>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="empty-bag-notice">
+        <p>Your shopping bag is currently empty.</p>
+        <a href="index.html#best-of-month" class="drawer-shop-link">Discover Bestsellers →</a>
+      </div>
+    </div>
+    <div class="drawer-footer" id="drawerFooter" style="display: none;">
+      <div class="drawer-subtotal-row">
+        <span>Selected Subtotal</span>
+        <strong id="drawerSubtotal">$0</strong>
+      </div>
+      <button type="button" class="drawer-checkout-btn" id="drawerCheckoutBtn">PROCEED TO CHECKOUT</button>
+    </div>
+  </aside>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notification" id="toastNotice" role="status" aria-live="polite">
+    <span class="toast-message">Profile changes saved</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

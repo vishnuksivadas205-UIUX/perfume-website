@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Secure Maison Checkout — Majestic Parfums Paris. Complete your order with complimentary express worldwide delivery." />
+  <title>Maison Checkout | Majestic Parfums Paris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="checkout-page-body">
+
+  <!-- CHECKOUT BRAND HEADER -->
+  <header class="checkout-header">
+    <div class="checkout-header-inner">
+      <a class="brand" href="index.html" aria-label="Majestic Parfums home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" role="img">
+            <circle cx="20" cy="20" r="15.5"></circle>
+            <path d="M20 7.5 23.4 16l9.1.7-7 5.9 2.2 8.8-7.7-4.8-7.7 4.8 2.2-8.8-7-5.9 9.1-.7z"></path>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name">MAJESTIC</span>
+          <span class="brand-subtitle">PARFUMS PARIS</span>
+        </span>
+      </a>
+
+      <div class="checkout-security-tag">
+        <span>Secure Checkout</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="checkout-main-wrap">
+    <div class="checkout-container">
+
+      <!-- LEFT COLUMN: PAYMENT & SHIPPING FORM -->
+      <div class="checkout-form-col">
+        <form id="checkoutPaymentForm" action="confirmation.html" method="GET">
+
+          <!-- STEP 1: CONTACT INFORMATION -->
+          <div class="checkout-step-block">
+            <div class="step-title-row">
+              <span class="step-num">1</span>
+              <h2>Contact Details</h2>
+            </div>
+            <div class="form-group-single">
+              <label for="checkoutEmail">Email Address for Order Confirmation & DHL Tracking</label>
+              <input type="email" id="checkoutEmail" name="email" required placeholder="e.g. eleonore@paris.com" class="checkout-input" />
+            </div>
+            <label class="checkout-checkbox-label">
+              <input type="checkbox" checked />
+              <span>Receive privileged invitations to private extrait releases from our Grasse atelier</span>
+            </label>
+          </div>
+
+          <!-- STEP 2: SHIPPING ADDRESS -->
+          <div class="checkout-step-block">
+            <div class="step-title-row">
+              <span class="step-num">2</span>
+              <h2>Shipping Address</h2>
+            </div>
+
+            <div class="form-row-two">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="Éléonore" class="checkout-input" />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="Laurent" class="checkout-input" />
+              </div>
+            </div>
+
+            <div class="form-group-single">
+              <label for="address">Street Address</label>
+              <input type="text" id="address" name="address" required placeholder="18 Rue de la Paix" class="checkout-input" />
+            </div>
+
+            <div class="form-group-single">
+              <label for="apartment">Apartment, Suite, or Private Residence (Optional)</label>
+              <input type="text" id="apartment" placeholder="Appartement 4B" class="checkout-input" />
+            </div>
+
+            <div class="form-row-three">
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required placeholder="Paris" class="checkout-input" />
+              </div>
+              <div class="form-group">
+                <label for="postalCode">Postcode</label>
+                <input type="text" id="postalCode" name="postalCode" required placeholder="75002" class="checkout-input" />
+              </div>
+              <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" class="checkout-select">
+                  <option value="France">France</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Switzerland">Switzerland</option>
+                  <option value="Germany">Germany</option>
+                  <option value="United Arab Emirates">United Arab Emirates</option>
+                  <option value="Canada">Canada</option>
+                  <option value="India">India</option>
+                  <option value="Australia">Australia</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group-single">
+              <label for="phone">Phone Number (For DHL Express Delivery Updates)</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+33 1 42 68 00 00" class="checkout-input" />
+            </div>
+          </div>
+
+          <!-- STEP 3: SHIPPING METHOD -->
+          <div class="checkout-step-block">
+            <div class="step-title-row">
+              <span class="step-num">3</span>
+              <h2>Delivery Method</h2>
+            </div>
+            <div class="shipping-option-card selected">
+              <div class="shipping-radio-circle"></div>
+              <div class="shipping-info">
+                <strong>Standard Home Delivery</strong>
+                <span>Delivered to your address • 2–3 Business Days</span>
+              </div>
+              <span class="shipping-cost">FREE</span>
+            </div>
+          </div>
+
+          <!-- STEP 4: PAYMENT METHOD -->
+          <div class="checkout-step-block">
+            <div class="step-title-row">
+              <span class="step-num">4</span>
+              <h2>Payment Method</h2>
+            </div>
+
+            <!-- PAYMENT TABS -->
+            <div class="payment-tabs-row" role="tablist">
+              <button type="button" class="pay-tab active" data-tab="card" role="tab" aria-selected="true">
+                <span>Credit / Debit Card</span>
+              </button>
+              <button type="button" class="pay-tab" data-tab="express" role="tab" aria-selected="false">
+                <span>Online Payment</span>
+              </button>
+              <button type="button" class="pay-tab" data-tab="klarna" role="tab" aria-selected="false">
+                <span>Home Delivery (COD)</span>
+              </button>
+            </div>
+
+            <!-- CREDIT CARD FIELDS -->
+            <div class="payment-panel-content" id="cardPanel">
+              <div class="form-group-single">
+                <label for="cardNumber">Card Number</label>
+                <div class="input-with-card-icons">
+                  <input type="text" id="cardNumber" maxlength="19" required placeholder="4242 •••• •••• 4242" class="checkout-input" />
+                  <span class="card-brand-tag">VISA / MC</span>
+                </div>
+              </div>
+
+              <div class="form-row-two">
+                <div class="form-group">
+                  <label for="cardExpiry">Expiration Date</label>
+                  <input type="text" id="cardExpiry" maxlength="5" required placeholder="MM / YY" class="checkout-input" />
+                </div>
+                <div class="form-group">
+                  <label for="cardCvc">Security Code (CVC)</label>
+                  <input type="password" id="cardCvc" maxlength="4" required placeholder="•••" class="checkout-input" />
+                </div>
+              </div>
+
+              <div class="form-group-single">
+                <label for="cardName">Name as it Appears on Card</label>
+                <input type="text" id="cardName" required placeholder="Éléonore Laurent" class="checkout-input" />
+              </div>
+            </div>
+
+            <!-- 1-CLICK PAY PANEL -->
+            <div class="payment-panel-content" id="expressPanel" style="display: none;">
+              <p class="express-note">Pay securely online via your preferred digital wallet or net banking:</p>
+              <button type="submit" class="express-pay-btn">Pay Online Now</button>
+            </div>
+
+            <!-- HOME DELIVERY (COD) PANEL -->
+            <div class="payment-panel-content" id="klarnaPanel" style="display: none;">
+              <p class="express-note">Pay cash or card upon delivery at your doorstep. No advance payment required.</p>
+            </div>
+          </div>
+
+          <!-- SUBMIT PAYMENT BUTTON -->
+          <button type="submit" class="checkout-submit-btn" id="submitOrderBtn">
+            
+            <span>COMPLETE ORDER & PAY — $185.00</span>
+          </button>
+
+          <p class="checkout-disclaimer">
+            By placing your order, you agree to Majestic Parfums' <a href="#">Terms of Sale</a> and <a href="#">Privacy Policy</a>. All orders are processed in a 256-bit bank-grade encrypted environment.
+          </p>
+
+        </form>
+      </div>
+
+      <!-- RIGHT COLUMN: ORDER SUMMARY -->
+      <aside class="checkout-summary-col" aria-label="Order Summary">
+        <div class="checkout-summary-card">
+          <h3 class="summary-card-title">Order Summary</h3>
+
+          <!-- ITEM ROW -->
+          <div class="summary-item-row">
+            <div class="summary-item-img-wrap">
+              <img src="assets/normalized/perfume3.png" alt="Aurélia Nuit Dorée" class="summary-item-img" />
+              <span class="summary-item-qty">1</span>
+            </div>
+            <div class="summary-item-desc">
+              <h4>Aurélia Nuit Dorée</h4>
+              <p>50 ML Flacon • Extrait de Parfum (24%)</p>
+              <span class="summary-item-badge">Grasse Signature Edition</span>
+            </div>
+            <div class="summary-item-price">$185.00</div>
+          </div>
+
+          <!-- COMPLIMENTARY ADDITIONS INCLUDED -->
+          <div class="summary-perks-list">
+            <div class="perk-row">
+              <span class="perk-check">✓</span>
+              <span>Complimentary 2ml Scent Vial</span>
+              <strong class="perk-free">FREE</strong>
+            </div>
+            <div class="perk-row">
+              <span class="perk-check">✓</span>
+              <span>Handcrafted Gift Box with Wax Seal</span>
+              <strong class="perk-free">FREE</strong>
+            </div>
+            <div class="perk-row">
+              <span class="perk-check">✓</span>
+              <span>Insured DHL Express Shipping</span>
+              <strong class="perk-free">FREE</strong>
+            </div>
+          </div>
+
+          <!-- VOUCHER CODE FORM -->
+          <div class="summary-voucher-wrap">
+            <input type="text" id="voucherCodeInput" placeholder="Maison Privilege Code" class="voucher-input" />
+            <button type="button" id="applyVoucherBtn" class="voucher-apply-btn">APPLY</button>
+          </div>
+          <div id="voucherFeedback" class="voucher-feedback" style="display: none;"></div>
+
+          <!-- PRICE CALCULATION BREAKDOWN -->
+          <div class="summary-breakdown">
+            <div class="breakdown-row">
+              <span>Subtotal</span>
+              <strong id="summarySubtotal">$185.00</strong>
+            </div>
+            <div class="breakdown-row" id="discountRow" style="display: none;">
+              <span>Privilege Discount (10%)</span>
+              <strong id="discountAmount">-$18.50</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Express Delivery (Worldwide)</span>
+              <strong class="free-text">COMPLIMENTARY</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Taxes & Duties</span>
+              <strong class="free-text">INCLUDED</strong>
+            </div>
+
+            <hr class="summary-divider" />
+
+            <div class="breakdown-total-row">
+              <span>Total Amount</span>
+              <strong id="summaryTotal">$185.00 USD</strong>
+            </div>
+          </div>
+
+          <!-- MAISON EXPERIENCE SEAL -->
+          <div class="maison-experience-box">
+            <div class="seal-icon">✦</div>
+            <p>
+              <strong>The Maison Try-at-Home Guarantee:</strong> Every flacon includes a complimentary 2ml matching sample. Test it on your skin before opening the primary bottle. If you are not captivated, return the unopened 50ml flacon for a full 100% refund.
+            </p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- MINIMAL LUXURY FOOTER -->
+  <footer class="checkout-footer">
+    <div class="checkout-footer-inner">
+      <p>© 2026 MAJESTIC PARFUMS PARIS. ALL RIGHTS RESERVED.</p>
+      <div class="checkout-footer-links">
+        <a href="#">CLIENT CONCIERGE</a>
+        <a href="#">DELIVERY & RETURNS</a>
+        <a href="#">TERMS & CONDITIONS</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
